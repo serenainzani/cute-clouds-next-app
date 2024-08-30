@@ -1,5 +1,5 @@
-import { Sun } from "react-feather";
+import { IconCloudFilled } from "@tabler/icons-react";
 
 export default function WeatherIcon() {
-    return <Sun />;
+    return <IconCloudFilled size={90} color={"white"} />;
 }

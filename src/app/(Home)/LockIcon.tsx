@@ -1,5 +1,5 @@
-import { Lock } from "react-feather";
+import { IconLock } from "@tabler/icons-react";
 
 export default function LockIcon() {
-    return <Lock />;
+    return <IconLock size={108} color={"white"} />;
 }
