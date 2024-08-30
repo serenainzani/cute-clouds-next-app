@@ -15,8 +15,17 @@ export default function Home() {
             <div className="flex justify-center pt-20">
                 <Clock />
             </div>
-            <div className="flex justify-center pt-20">
-                <Profile />
+            <div className="flex pt-20 justify-center items-center space-x-8">
+                <Profile
+                    name="Serena"
+                    src="/serena-portrait-bg-removed.png"
+                    size={150}
+                />
+                <Profile
+                    name="Lynnie"
+                    src="/lynnie-portrait-bg-removed.png"
+                    size={185}
+                />
             </div>
         </main>
     );

@@ -1,20 +1,18 @@
 import Image from "next/image";
 
-export default function Clock() {
-    const timeNow = new Date().toLocaleTimeString("en-US", {
-        hour: "numeric",
-        minute: "numeric",
-    });
+
+interface ProfileProps {
+    src: string;
+    name: string;
+    size: number;
+}
+
+export default function Profile({ src, name, size }: ProfileProps) {
     return (
-        <div className="bg-white rounded-xl shadow-md p-6 w-80 mx-auto flex flex-col items-center text-center">
-            <Image
-                src="/serena-portrait-bg-removed.png"
-                width={150}
-                height={150}
-                alt="pic of serena"
-            />
+        <div className="bg-white rounded-lg shadow-xl p-6 w-80 flex flex-col items-center text-center">
+            <Image src={src} width={size} height={size} alt="pic of serena" />
             <h1 className="text-4xl font-semibold mb-4 text-pink-400 pt-5">
-                Serena Inzani
+                {name}
             </h1>
             <p className="text-gray-700 ">she/her</p>
         </div>
