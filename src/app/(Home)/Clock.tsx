@@ -22,5 +22,5 @@ export default function Clock() {
 
         return () => clearInterval(intervalId);
     }, []);
-    return <p className="text-9xl">{timeNow}</p>;
+    return <p className="text-9xl text-white drop-shadow-lg">{timeNow}</p>;
 }
