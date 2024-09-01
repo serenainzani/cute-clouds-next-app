@@ -1,10 +1,23 @@
+"use client";
+
+import React, { useState } from "react";
 import WeatherIcon from "./WeatherIcon";
 import LockIcon from "./LockIcon";
 import BatteryIcon from "./BatteryIcon";
 import Clock from "./Clock";
 import Profile from "./Profile";
+import { IconHeartFilled } from "@tabler/icons-react";
 
 export default function Home() {
+    const [heartColor, setHeartColor] = useState("white");
+
+    const handleMouseEnter = () => {
+        setHeartColor("pink");
+    };
+    const handleMouseLeave = () => {
+        setHeartColor("white");
+    };
+
     return (
         <main>
             <div className="flex justify-evenly items-center pt-20">
@@ -21,6 +34,14 @@ export default function Home() {
                     src="/serena-portrait-bg-removed.png"
                     size={150}
                 />
+                <div className="px-1">
+                    <IconHeartFilled
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        color={heartColor}
+                        size={100}
+                    />
+                </div>
                 <Profile
                     name="Lynnie"
                     src="/lynnie-portrait-bg-removed.png"
